@@ -26,4 +26,9 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+
+	compile "org.springframework.boot:spring-boot-starter-jdbc"
+	compile("mysql:mysql-connector-java:5.1.31")
+	compile group: 'org.hamcrest', name: 'hamcrest-all', version: '1.3'
+
 }
