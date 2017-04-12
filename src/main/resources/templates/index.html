@@ -1,37 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8"></meta>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="/list.css"/>
     <title>CampusTore</title>
 </head>
 <body>
-<div id="Header">
-    사용자 관리
+<div class="container">
+<div class="smallhaeder">
+    <div id="inputWrapper">
+        <input type="text" class="input_text"></input>
+        <button type="submit" value="안녕"></button>
+    </div>
+    <div class="sortWrapper">
+        <ul>
+            <li>등록순</li>
+            <li>추천순</li>
+            <li>조회순</li>
+            <li>펀딩순</li>
+        </ul>
+    </div>
 </div>
-<div id="Menu">
-    <a href="list">목록보기</a><br/>
-    <a href="create">등록하기</a>
+<div id="ContentContainer">
+    <div data-th-each="apk : ${apklist}">
+        <div data-th-text="${apk.STORAGE_URL}"></div>
+        <div data-th-text="${apk.APK_NAME}"></div>
+    </div>
 </div>
-<div id="Content">
-    <table>
-        <caption>사용목록</caption>
-        <thead>
-        <tr>
-            <th>아이디</th>
-            <th>이름</th>
-            <th>수정</th>
-            <th>삭제</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr data-th-each="apk : ${apklist}">
-            <td data-th-text="${apk.STORAGE_URL}" />
-            <td data-th-text="${apk.APK_NAME}" />
-            <td><a href="" th:href="@{edit(id=${apk.id})}">수정</a></td>
-            <td><a href="" th:href="@{remove(id=${apk.id})}">삭제</a></td>
-        </tr>
-        </tbody>
-    </table>
 </div>
 </body>
 </html>
