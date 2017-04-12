@@ -1,10 +1,14 @@
-package com.example;
+package com.example.dao;
 
+import com.example.APK;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by blue on 2017-04-12.
@@ -15,6 +19,8 @@ public class ApkDao {
 
     @Autowired
     JdbcTemplate jdbcTemplate;
+
+
 
     public APK getApk(int apk_no) {
         String SQL = "Select * from APK_INFO_TB Where APK_NO = ?";
@@ -31,5 +37,21 @@ public class ApkDao {
             return apk1;
         });
         return apk;
+    }
+
+    public List<APK> getApkList() {
+        String SQL = "Select * from APK_INFO_TB";
+        List<APK> apks = new ArrayList<APK>();
+
+        List<Map<String, Object>> rows =jdbcTemplate.queryForList(SQL);
+        for (Map row : rows) {
+            APK apk = new APK();
+            apk.setAPK_NO((Integer) (row.get("APK_NO")));
+            apk.setAPK_NAME((String)row.get("APK_NAME"));
+            apk.setSTORAGE_URL((String)row.get("STORAGE_URL"));
+            apks.add(apk);
+        }
+
+        return apks;
     }
 }
