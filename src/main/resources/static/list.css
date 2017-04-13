@@ -1,5 +1,12 @@
 .container{
 	display: -webkit-flex;
   	display:         flex;
-	background-color: blue;
+}
+
+.ContentContainer{
+	border: solid 1px black ;
+}
+
+.content{
+	border: solid 1px red;
 }

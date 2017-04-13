@@ -1,4 +1,4 @@
-package com.example;
+package com.example.model;
 
 /**
  * Created by blue on 2017-04-12.
