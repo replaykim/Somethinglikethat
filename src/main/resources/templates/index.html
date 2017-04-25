@@ -7,7 +7,7 @@
 </head>
 <body>
 <div class="container">
-    <div class="smallhaeder">
+    <div class="smallhaeder center_align">
         <div class="inputWrapper">
             <input type="text" class="input_text"></input>
             <button type="submit" class="searchBtn">검색</button>
@@ -20,12 +20,13 @@
                 <li class="listMenu">펀딩순</li>
             </ul>
         </div>
+        <a href="###" class="to_write">글쓰기</a>
     </div>
-    <div class="ContentContainer">
+    <div class="ContentContainer center_align">
         <div data-th-each="apk : ${apklist}" class="content">
             <a th:href="@{/content(APK_NO=${apk.APK_NO})}">
-                <div data-th-text="${apk.STORAGE_URL}"></div>
                 <div data-th-text="${apk.APK_NAME}"></div>
+                <div data-th-text="${apk.VIEW_CNT}"></div>
             </a>
         </div>
     </div>

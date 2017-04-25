@@ -32,6 +32,7 @@ public class ApkDao {
             apk1.setAPK_NAME(rs.getString("APK_NAME"));
             apk1.setAPK_NO(rs.getInt("APK_NO"));
             apk1.setSTORAGE_URL(rs.getString("STORAGE_URL"));
+            apk1.setVIEW_CNT(rs.getString("VIEW_CNT"));
 
             return apk1;
         });
@@ -48,6 +49,7 @@ public class ApkDao {
             apk.setAPK_NO((Integer) (row.get("APK_NO")));
             apk.setAPK_NAME((String)row.get("APK_NAME"));
             apk.setSTORAGE_URL((String)row.get("STORAGE_URL"));
+            apk.setVIEW_CNT((String)row.get("VIEW_CNT"));
             apks.add(apk);
         }
 

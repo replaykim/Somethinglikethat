@@ -2,10 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-    <title>Title</title>
+    <title>CampusTore</title>
+    <link rel="stylesheet" type="text/css" href="/list.css"/>
+    <link rel="stylesheet" type="text/css" href="/contents.css"/>
 </head>
 <body>
-<div data-th-text="${apk.STORAGE_URL}"></div>
-<div data-th-text="${apk.APK_NAME}"></div>
+<div class="whole_wrap center_align">
+    <div class="app_head_wrapper">
+        <img width="200px" height="auto" class="app_img"
+             src="https://s3.ap-northeast-2.amazonaws.com/somthinglikethat/images/11111.png"/>
+        <div class="app_title_wrapper">
+            <h2 class="app_title" data-th-text="${apk.APK_NAME}"></h2>
+            <div data-th-text="${apk.VIEW_CNT}"></div>
+            <div></div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

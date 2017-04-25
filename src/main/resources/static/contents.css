@@ -1,0 +1,17 @@
+.app_head_wrapper{
+    display: -webkit-flex;
+    display:         flex;
+    max-height: 300px;
+}
+
+.app_img {
+    flex : 1;
+}
+
+.app_title_wrapper {
+
+}
+.app_title{
+    flex : 2;
+
+}
