@@ -23,8 +23,10 @@
     </div>
     <div class="ContentContainer">
         <div data-th-each="apk : ${apklist}" class="content">
-            <div data-th-text="${apk.STORAGE_URL}"></div>
-            <div data-th-text="${apk.APK_NAME}"></div>
+            <a th:href="@{/content(APK_NO=${apk.APK_NO})}">
+                <div data-th-text="${apk.STORAGE_URL}"></div>
+                <div data-th-text="${apk.APK_NAME}"></div>
+            </a>
         </div>
     </div>
 </div>
