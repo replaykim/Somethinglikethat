@@ -30,7 +30,7 @@
             <div th:case="5" class="rating_image" style="background-position-y: 5.8em"></div>
         </div>
         <div class="funding_grph_wrapper">
-            <div class="funding_graph" th:style="+ height: @{(${apk.RECM_CNT})}  + %">
+            <div class="funding_graph" th:style=" 'height:'+ @{(${apk.RECM_CNT})}/5  + '%'">
 
             </div>
         </div>

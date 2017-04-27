@@ -14,7 +14,7 @@ import java.util.List;
  */
 
 @org.springframework.stereotype.Controller
-public class Controller {
+public class    Controller {
     @Autowired
     ApkDao apkDao;
 
